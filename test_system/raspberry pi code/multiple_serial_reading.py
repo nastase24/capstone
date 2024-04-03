@@ -17,15 +17,14 @@ def read_from_arduinos(ports):
         data = ser1.readline().decode('utf-8').strip()
         now = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
         return (f"{now},{data}")
-        ser1.reset_input_buffer()
-        ser1.reset_output_buffer()
     else: 
         time.sleep(0.1)    
         
 if __name__ == '__main__':
     SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
-    SPREADSHEET_ID = "1bHgL6PhDouqGxLgQa71N2wK-uMwEeH2YCopderZaSlc"
+    # put ID here
+    SPREADSHEET_ID = ""
     
     credentials = None
     if os.path.exists("token.json"):

@@ -15,13 +15,12 @@ import serial
 # which will upload data measured from an arduino to a google sheet
 # NOTE: it is not finished, and needs to be implemented functionally on a
 # pi, interface correctly with the arduino, and be able to run in the background
-# it still needs to changed to send data in the proper intervals
 
-# TODO: add in RTC sensor code that measures time when data is taken.
 
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
-SPREADSHEET_ID = "1bHgL6PhDouqGxLgQa71N2wK-uMwEeH2YCopderZaSlc"
+# add spreadsheet id here
+SPREADSHEET_ID = ""
 
 def main():
     credentials = authenticate()
@@ -41,7 +40,8 @@ def main():
                     current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                     data.append(current_time)
                     print(data)
-                    append_data(sheets, data)          
+                    append_data(sheets, data) 
+                    time.sleep(60)         
     except HttpError as e:
         print(e.error_details)    
 

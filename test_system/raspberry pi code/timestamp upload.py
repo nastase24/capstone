@@ -19,13 +19,12 @@ from google.auth.transport.requests import Request
 # which will upload data measured from an arduino to a google sheet
 # NOTE: it is not finished, and needs to be implemented functionally on a
 # pi, interface correctly with the arduino, and be able to run in the background
-# it still needs to changed to send data in the proper intervals
 
-# TODO: add in RTC sensor code that measures time when data is taken.
 
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
-SPREADSHEET_ID = "1bHgL6PhDouqGxLgQa71N2wK-uMwEeH2YCopderZaSlc"
+# add spreadsheet id here
+SPREADSHEET_ID = ""
 
 def authenticate():
     credentials = None
