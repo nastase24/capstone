@@ -1,0 +1,1 @@
+Mean: 164.34, Median: 0.5, Mode: 0.0, Max: 1088.2, Min: 0.1, Stdev: 231.99 Time of Peak: 1137 W/m^2
